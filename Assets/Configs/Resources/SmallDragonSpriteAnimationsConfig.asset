@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97ad1fdf94023bf4b8db36378b08d62c, type: 3}
+  m_Name: SmallDragonSpriteAnimationsConfig
+  m_EditorClassIdentifier: 
+  Sequences:
+  - Track: 0
+    Sprites:
+    - {fileID: 21300000, guid: c54af867541724c42b3e8f5b5037d4cf, type: 3}
+    - {fileID: 21300000, guid: 99ed0f80d93cf3f4f8bc49ce9242dcdf, type: 3}
+    - {fileID: 21300000, guid: c09cb491ae83eee46be2110d8c367e9e, type: 3}
+  - Track: 1
+    Sprites:
+    - {fileID: 21300000, guid: 21ef4418505841743947a09b6778dab0, type: 3}
+    - {fileID: 21300000, guid: d6c0467f307eccb428a389819575e54d, type: 3}
+    - {fileID: 21300000, guid: ce446d9d2a43c014b864c63aa68f6b19, type: 3}
+    - {fileID: 21300000, guid: 7b662320d48d7e8469058c09fed4d36d, type: 3}
+  - Track: 5
+    Sprites:
+    - {fileID: 21300000, guid: 8fd13e645a23dcb46bcd5a363e1b874a, type: 3}
+    - {fileID: 21300000, guid: 22468277cb8807542a1d05f4aa0accf1, type: 3}
+    - {fileID: 21300000, guid: d3036cdb0f691ac4e9da4bcd04b7f8b3, type: 3}
+  - Track: 4
+    Sprites:
+    - {fileID: 21300000, guid: 2a8c57f88d8d49540ab2b0241497d6b0, type: 3}
+    - {fileID: 21300000, guid: 437abf1e75da1fb498e979f4359c04f7, type: 3}
+    - {fileID: 21300000, guid: 2c98009adb8908f4e8f2f4a1aca6f113, type: 3}
+    - {fileID: 21300000, guid: 4ee65a54688739b47bb12b811a9a3e67, type: 3}

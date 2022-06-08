@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: BlueWizardJump
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: 8adfadfbb4d208146aab3845ee734ccc, type: 3}
+    - {fileID: 2800000, guid: dbdb96f137503a34a8a0495b85d1caae, type: 3}
+    - {fileID: 2800000, guid: c28ce00e673d1bd489b961a8eed85a20, type: 3}
+    - {fileID: 2800000, guid: 17a4eb96923c2c04b81a642c1da62e78, type: 3}
+    - {fileID: 2800000, guid: ed6a31a01cba34a40879ffa7cbbc9d2d, type: 3}
+    - {fileID: 2800000, guid: e4b9ff4c2b58da043872a504e14f4bba, type: 3}
+    - {fileID: 2800000, guid: 2b8621059ec948649a27c625003c09d5, type: 3}
+    - {fileID: 2800000, guid: ac4515ef5a5f84c4a81a6e146f7a6efd, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: ed6a31a01cba34a40879ffa7cbbc9d2d, type: 3}
+  - {fileID: 21300000, guid: dbdb96f137503a34a8a0495b85d1caae, type: 3}
+  - {fileID: 21300000, guid: 2b8621059ec948649a27c625003c09d5, type: 3}
+  - {fileID: 21300000, guid: 17a4eb96923c2c04b81a642c1da62e78, type: 3}
+  - {fileID: 21300000, guid: 8adfadfbb4d208146aab3845ee734ccc, type: 3}
+  - {fileID: 21300000, guid: e4b9ff4c2b58da043872a504e14f4bba, type: 3}
+  - {fileID: 21300000, guid: c28ce00e673d1bd489b961a8eed85a20, type: 3}
+  - {fileID: 21300000, guid: ac4515ef5a5f84c4a81a6e146f7a6efd, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - CharaWizardJump_00004
+  - CharaWizardJump_00001
+  - CharaWizardJump_00006
+  - CharaWizardJump_00003
+  - CharaWizardJump_00000
+  - CharaWizardJump_00005
+  - CharaWizardJump_00002
+  - CharaWizardJump_00007
+  m_RenderDataMap: {}
+  m_Tag: BlueWizardJump
+  m_IsVariant: 0

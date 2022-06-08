@@ -1,0 +1,114 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: BlueWizardIdle
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 8
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 1
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: 63d7ddb8659817645a342a1dea2d754d, type: 3}
+    - {fileID: 2800000, guid: 822b0eab22048f3499a59fef94cdff48, type: 3}
+    - {fileID: 2800000, guid: e4fbe35dd8287b64ba38a0f6eccd1542, type: 3}
+    - {fileID: 2800000, guid: 16d4fd9ff3df8e94b947872fe96bca53, type: 3}
+    - {fileID: 2800000, guid: 0347c6506f31a72449fbd36a16246db7, type: 3}
+    - {fileID: 2800000, guid: 5f226b9107fc8f34cb2c6357a17b4516, type: 3}
+    - {fileID: 2800000, guid: e4f1695d62c3c85498eb8abf506bf1be, type: 3}
+    - {fileID: 2800000, guid: 9b7bab123a8e2eb43b1c9af14cc68c83, type: 3}
+    - {fileID: 2800000, guid: 63c27bd5720177c4d856c1b2f7e64a33, type: 3}
+    - {fileID: 2800000, guid: 44a574100e33b1d4088343bc4927be9a, type: 3}
+    - {fileID: 2800000, guid: ca11876e91f23e34285679f4b6923785, type: 3}
+    - {fileID: 2800000, guid: ceeed3039d3d907458356920ac3ac181, type: 3}
+    - {fileID: 2800000, guid: 281ac26f802ea7c4dab8b0cbfedc85c8, type: 3}
+    - {fileID: 2800000, guid: 3864a3a31a6fa304882a2bd7e9345129, type: 3}
+    - {fileID: 2800000, guid: 8ffbb1a0854b07c40af08a6db63dac51, type: 3}
+    - {fileID: 2800000, guid: 749b9839a6fb7ce419b4e0a352ad639c, type: 3}
+    - {fileID: 2800000, guid: 7fd71523a3ecd9b41986b68374c0079e, type: 3}
+    - {fileID: 2800000, guid: e9ee20d4aef20a54a9b897666ddd56da, type: 3}
+    - {fileID: 2800000, guid: f39e554374f64a9478a780fda278685c, type: 3}
+    - {fileID: 2800000, guid: 151bb819e0861d147a374c58527e8285, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 44a574100e33b1d4088343bc4927be9a, type: 3}
+  - {fileID: 21300000, guid: 0347c6506f31a72449fbd36a16246db7, type: 3}
+  - {fileID: 21300000, guid: 8ffbb1a0854b07c40af08a6db63dac51, type: 3}
+  - {fileID: 21300000, guid: 5f226b9107fc8f34cb2c6357a17b4516, type: 3}
+  - {fileID: 21300000, guid: 9b7bab123a8e2eb43b1c9af14cc68c83, type: 3}
+  - {fileID: 21300000, guid: ceeed3039d3d907458356920ac3ac181, type: 3}
+  - {fileID: 21300000, guid: 7fd71523a3ecd9b41986b68374c0079e, type: 3}
+  - {fileID: 21300000, guid: f39e554374f64a9478a780fda278685c, type: 3}
+  - {fileID: 21300000, guid: 3864a3a31a6fa304882a2bd7e9345129, type: 3}
+  - {fileID: 21300000, guid: e9ee20d4aef20a54a9b897666ddd56da, type: 3}
+  - {fileID: 21300000, guid: 63c27bd5720177c4d856c1b2f7e64a33, type: 3}
+  - {fileID: 21300000, guid: 63d7ddb8659817645a342a1dea2d754d, type: 3}
+  - {fileID: 21300000, guid: 151bb819e0861d147a374c58527e8285, type: 3}
+  - {fileID: 21300000, guid: 749b9839a6fb7ce419b4e0a352ad639c, type: 3}
+  - {fileID: 21300000, guid: 822b0eab22048f3499a59fef94cdff48, type: 3}
+  - {fileID: 21300000, guid: e4fbe35dd8287b64ba38a0f6eccd1542, type: 3}
+  - {fileID: 21300000, guid: e4f1695d62c3c85498eb8abf506bf1be, type: 3}
+  - {fileID: 21300000, guid: ca11876e91f23e34285679f4b6923785, type: 3}
+  - {fileID: 21300000, guid: 281ac26f802ea7c4dab8b0cbfedc85c8, type: 3}
+  - {fileID: 21300000, guid: 16d4fd9ff3df8e94b947872fe96bca53, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - Chara - BlueIdle00009
+  - Chara - BlueIdle00004
+  - Chara - BlueIdle00014
+  - Chara - BlueIdle00005
+  - Chara - BlueIdle00007
+  - Chara - BlueIdle00011
+  - Chara - BlueIdle00016
+  - Chara - BlueIdle00018
+  - Chara - BlueIdle00013
+  - Chara - BlueIdle00017
+  - Chara - BlueIdle00008
+  - Chara - BlueIdle00000
+  - Chara - BlueIdle00019
+  - Chara - BlueIdle00015
+  - Chara - BlueIdle00001
+  - Chara - BlueIdle00002
+  - Chara - BlueIdle00006
+  - Chara - BlueIdle00010
+  - Chara - BlueIdle00012
+  - Chara - BlueIdle00003
+  m_RenderDataMap: {}
+  m_Tag: BlueWizardIdle
+  m_IsVariant: 0
