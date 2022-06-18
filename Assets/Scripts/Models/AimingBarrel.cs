@@ -5,7 +5,7 @@ namespace My2DPlatformer
     {
         private Transform _barrelTransform;
         private Transform _aimTransform;
-        private float _bulletSpeed = 10f;
+        private float _bulletSpeed = 15f;
         private float _freeFallAcceleration = 10f;
         private float? _alphaMinAngle = null;
 
@@ -37,12 +37,11 @@ namespace My2DPlatformer
                 float TheRoot = Mathf.Sqrt(underTheRoot);
                 float numerator = Speed2 + TheRoot;
                 float denominator = _freeFallAcceleration * x;
-                _alphaMinAngle = Mathf.Atan2(numerator, denominator) * Mathf.Rad2Deg; ;
+                _alphaMinAngle = Mathf.Atan2(numerator, denominator) * Mathf.Rad2Deg;
             }
             else
             {
-                _alphaMinAngle = null;
-                Debug.Log("Too far");
+                _alphaMinAngle = 45 * Mathf.Rad2Deg;
             }
 
             if (_alphaMinAngle != null)

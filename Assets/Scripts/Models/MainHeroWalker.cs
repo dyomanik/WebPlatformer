@@ -18,15 +18,15 @@ namespace My2DPlatformer
         private bool _IsDoingDash;
         private Vector3 _positionAfterDash;
 
-        public MainHeroWalker(CharacterView CharacterView, SpriteAnimator spriteAnimator)
+        public MainHeroWalker(CharacterView characterView, SpriteAnimator spriteAnimator)
         {
-            _characterView = CharacterView;
+            _characterView = characterView;
             _spriteAnimator = spriteAnimator;
         }
 
         public void Update()
         {
-            GetInput(Horizontal, Vertical);
+            GetInput();
 
             var isMove = Mathf.Abs(_xAxisInput) > _characterView.MovingThreshold;
 
@@ -88,10 +88,10 @@ namespace My2DPlatformer
             _characterView.SpriteRenderer.flipX = xAxisInput < 0;
         }
 
-        private void GetInput(string xAxis, string yAxis)
+        private void GetInput()
         {
-            _IsDoingJump = Input.GetAxis(yAxis) > 0;
-            _xAxisInput = Input.GetAxis(xAxis);
+            _IsDoingJump = Input.GetAxis(Vertical) > 0;
+            _xAxisInput = Input.GetAxis(Horizontal);
 
             if (Input.GetKeyDown(KeyCode.Space) && isGrounded())
             {

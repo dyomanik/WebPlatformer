@@ -1,14 +1,13 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 namespace My2DPlatformer
 {
-    public class BulletEmitter
+    public sealed class BulletEmitter
     {
-        private const float _delay = 3;
-        private const float _bulletSpeed = 10;
+        private const float _delay = 2;
+        private const float _bulletSpeed = 15;
 
-        private List<Bullet> _bullets = new List<Bullet>();
+        private List<PhysicsBullet> _bullets = new List<PhysicsBullet>();
         private Transform _transform;
 
         private int _currentIndex;
@@ -20,7 +19,7 @@ namespace My2DPlatformer
 
             foreach (var bulletView in bulletViews)
             {
-                _bullets.Add(new Bullet(bulletView));
+                _bullets.Add(new PhysicsBullet(bulletView));
             }
         }
 
@@ -41,8 +40,6 @@ namespace My2DPlatformer
                     _currentIndex = 0;
                 }
             }
-
-            _bullets.ForEach(b => b.Update());
         }
 
     }
