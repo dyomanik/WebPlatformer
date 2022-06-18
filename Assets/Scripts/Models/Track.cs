@@ -10,6 +10,7 @@ namespace My2DPlatformer
         jump,
         dash,
         death,
-        attack
+        attack,
+        coinRotation
     }
 }

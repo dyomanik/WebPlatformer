@@ -11,6 +11,9 @@ GameObject:
   - component: {fileID: 4599418255067225494}
   - component: {fileID: 4117593624787913198}
   - component: {fileID: 5270728325701795660}
+  - component: {fileID: 6305513230808848039}
+  - component: {fileID: 1270083652899078702}
+  - component: {fileID: 4186553115445573150}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -44,7 +47,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 775b75db55312214bb42b194a2795920, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteRenderer: {fileID: 5270728325701795660}
+  _spriteRenderer: {fileID: 5270728325701795660}
+  _transform: {fileID: 4599418255067225494}
+  _collider: {fileID: 1270083652899078702}
+  _rigidbody: {fileID: 6305513230808848039}
+  _walkSpeed: 250
+  _animationsSpeed: 20
+  _jumpStartSpeed: 700
+  _movingThreshold: 0.1
+  _flyThreshold: 0.4
+  _groundLevel: -2.92
+  _freeFallAcceleration: -10
+  _lifes: 3
 --- !u!212 &5270728325701795660
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -96,3 +110,66 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!50 &6305513230808848039
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3506449874654708206}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!61 &1270083652899078702
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3506449874654708206}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.035498857, y: -0.7432835}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5.12, y: 5.12}
+    newSize: {x: 5.12, y: 5.12}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.91788125, y: 0.9770007}
+  m_EdgeRadius: 0.19
+--- !u!70 &4186553115445573150
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3506449874654708206}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.004763782, y: 0.7099999}
+  m_Size: {x: 1.4270912, y: 1.5}
+  m_Direction: 0

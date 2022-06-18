@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 namespace My2DPlatformer
 {
@@ -5,48 +6,70 @@ namespace My2DPlatformer
     {
         [SerializeField]
         private Camera _camera;
+
         [SerializeField]
-        private SpriteRenderer _background;
+        private List<Transform> _backgrounds;
+
+        [SerializeField]
+        private List<Transform> _foregrounds;
+
         [SerializeField]
         private CharacterView _characterView;
 
+        [SerializeField]
+        private CannonView _cannonView;
+
+        [SerializeField]
+        private List<BulletView> _bullets;
+
+        [SerializeField]
+        private List<LevelObjectView> _coins;
+
+        [SerializeField]
+        private List<LevelObjectView> _deathZones;
+
+        [SerializeField]
+        private List<LevelObjectView> _winZone;
+
         private SpriteAnimationsConfig _playerConfig;
+        private SpriteAnimationsConfig _coinsConfig;
         private ParalaxManager _paralaxManager;
-        private SpriteAnimator _spriteAnimator;
-        //[SerializeField]
-        //private SomeView _someView;
-        //add links to test views <1>
-        //private SomeManager _someManager;
-        //add links to some logic managers <2>
+        private SpriteAnimator _playerSpriteAnimator;
+        private SpriteAnimator _coinsSpriteAnimator;
+        private MainHeroPhysicsWalker _mainHeroPhysicsWalker;
+        private AimingBarrel _aimingBarrel;
+        private BulletEmitter _bulletEmitter;
+        private CoinsManager _coinsManager;
+        private LevelCompleteManager _levelCompleteManager;
+
 
         private void Start()
         {
-            //SomeConfig config = Resources.Load("SomeConfig",
-            //typeof(SomeConfig)) as SomeConfig;
-            //load some configs here <3>
-            //_someManager = new SomeManager(config);
-            //create some logic managers here for tests <4>
-            _paralaxManager = new ParalaxManager(_camera.transform, _background.transform);
+            _paralaxManager = new ParalaxManager(_camera.transform, _backgrounds, _foregrounds);
             _playerConfig = Resources.Load<SpriteAnimationsConfig>("PlayerSpriteAnimationsConfig");
-            _spriteAnimator = new SpriteAnimator(_playerConfig);
-            _spriteAnimator.StartAnimation(_characterView.spriteRenderer, Track.walk, true, 10);
+            _coinsConfig = Resources.Load<SpriteAnimationsConfig>("StarSpriteAnimationsConfig");
+            _playerSpriteAnimator = new SpriteAnimator(_playerConfig);
+            _coinsSpriteAnimator = new SpriteAnimator(_coinsConfig);
+            _playerSpriteAnimator.StartAnimation(_characterView.SpriteRenderer, Track.walk, true, 10);
+            _mainHeroPhysicsWalker = new MainHeroPhysicsWalker(_characterView, _playerSpriteAnimator);
+            _aimingBarrel = new AimingBarrel(_cannonView.BarrelTransform, _characterView.transform);
+            _bulletEmitter = new BulletEmitter(_bullets, _cannonView.BulletEmitterTransform);
+            _coinsManager = new CoinsManager(_characterView, _coins, _coinsSpriteAnimator);
+            _levelCompleteManager = new LevelCompleteManager(_characterView, _deathZones, _winZone);
         }
+
         private void Update()
         {
-            //_someManager.Update();
-            //update logic managers here <5>
             _paralaxManager.Update();
-            _spriteAnimator.Update();
+            _playerSpriteAnimator.Update();
+            _aimingBarrel.Update();
+            _bulletEmitter.Update();
+            _mainHeroPhysicsWalker.Update();
         }
+
         private void FixedUpdate()
         {
-            //_someManager.FixedUpdate();
-            //update logic managers here <6>
-        }
-        private void OnDestroy()
-        {
-            //_someManager.Dispose();
-            //dispose logic managers here <7>
+            _mainHeroPhysicsWalker.FixedUpdate();
         }
     }
 }
