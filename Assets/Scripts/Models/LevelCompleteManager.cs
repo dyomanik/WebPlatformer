@@ -16,6 +16,7 @@ namespace My2DPlatformer
             _characterView = characterView;
             _characterView.LevelObjectViewContact += OnLevelObjectContact;
             _characterView.BulletContact += BulletContact;
+            _characterView.TrapViewContact += TrapContact;
             _deathZones = deathZones;
             _winZones = winZones;
         }
@@ -46,10 +47,26 @@ namespace My2DPlatformer
             }
         }
 
+        private void TrapContact(TrapView trapView, int damage)
+        {
+            if (_characterView.Lifes > 0)
+            {
+                _characterView.Lifes -= damage;
+                _characterView.Rigidbody.AddForce(Vector2.up * _characterView.JumpForce);
+                Debug.LogError("Contact");
+                if (_characterView.Lifes <= 0)
+                {
+                    _characterView.Transform.position = _startPosition;
+                    _characterView.Lifes = 3;
+                }
+            }
+        }
+
         public void Dispose()
         {
             _characterView.LevelObjectViewContact -= OnLevelObjectContact;
             _characterView.BulletContact -= BulletContact;
+            _characterView.TrapViewContact -= TrapContact;
         }
     }
 }

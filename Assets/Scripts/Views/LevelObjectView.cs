@@ -16,6 +16,8 @@ namespace My2DPlatformer
         [SerializeField]
         private Rigidbody2D _rigidbody;
 
+        public Action<LevelObjectView> LevelObjectViewContact { get; set; }
+
         public SpriteRenderer SpriteRenderer => _spriteRenderer;
         public Transform Transform => _transform;
         public Collider2D Collider => _collider;

@@ -8,10 +8,10 @@ namespace My2DPlatformer
         private Camera _camera;
 
         [SerializeField]
-        private List<Transform> _backgrounds;
+        private List<DiverseGroundView> _backgrounds;
 
         [SerializeField]
-        private List<Transform> _foregrounds;
+        private List<DiverseGroundView> _foregrounds;
 
         [SerializeField]
         private CharacterView _characterView;
@@ -31,6 +31,12 @@ namespace My2DPlatformer
         [SerializeField]
         private List<LevelObjectView> _winZone;
 
+        [SerializeField]
+        private List<LevelObjectView> _liftViews;
+
+        [SerializeField]
+        private List<LevelObjectView> _liftTriggers;
+
         private SpriteAnimationsConfig _playerConfig;
         private SpriteAnimationsConfig _coinsConfig;
         private ParalaxManager _paralaxManager;
@@ -41,6 +47,7 @@ namespace My2DPlatformer
         private BulletEmitter _bulletEmitter;
         private CoinsManager _coinsManager;
         private LevelCompleteManager _levelCompleteManager;
+        private LiftsManager _liftsManager;
 
 
         private void Start()
@@ -56,12 +63,14 @@ namespace My2DPlatformer
             _bulletEmitter = new BulletEmitter(_bullets, _cannonView.BulletEmitterTransform);
             _coinsManager = new CoinsManager(_characterView, _coins, _coinsSpriteAnimator);
             _levelCompleteManager = new LevelCompleteManager(_characterView, _deathZones, _winZone);
+            _liftsManager = new LiftsManager(_liftViews, _liftTriggers);
         }
 
         private void Update()
         {
             _paralaxManager.Update();
             _playerSpriteAnimator.Update();
+            _coinsSpriteAnimator.Update();
             _aimingBarrel.Update();
             _bulletEmitter.Update();
             _mainHeroPhysicsWalker.Update();

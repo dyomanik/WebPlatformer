@@ -23,7 +23,7 @@ namespace My2DPlatformer
             _characterView = characterView;
             _spriteAnimator = spriteAnimator;
 
-            _contactsPoller = new ContactsPoller(characterView.Collider);
+            _contactsPoller = new ContactsPoller(_characterView.Collider, _characterView.Rigidbody);
         }
 
         public void Update()
@@ -42,9 +42,9 @@ namespace My2DPlatformer
                 Move(isMove);
             }
 
-            if (_contactsPoller.IsGrounded && _isDoingJump && Mathf.Abs(_characterView.Rigidbody.velocity.y) <= _characterView.FlyThreshold)
+            if (_contactsPoller.IsGrounded && _isDoingJump && Mathf.Abs(_characterView.Rigidbody.velocity.y - _contactsPoller.GroundVelocity.y) <= _characterView.FlyThreshold)
             {
-                _characterView.Rigidbody.AddForce(Vector2.up * _characterView.JumpStartSpeed);
+                _characterView.Rigidbody.AddForce(Vector2.up * _characterView.JumpForce);
             }
 
             if (_contactsPoller.IsGrounded && !_isDoingDash)
@@ -83,7 +83,7 @@ namespace My2DPlatformer
             {
                 newVelocity = Time.fixedDeltaTime * _characterView.WalkSpeed * (_xAxisInput < 0 ? -1 : 1);
             }
-
+            //_characterView.Rigidbody.velocity = _characterView.Rigidbody.velocity.Change(x: newVelocity + (_contactsPoller.IsGrounded ? _contactsPoller.GroundVelocity.x : 0));
             _characterView.Rigidbody.velocity = _characterView.Rigidbody.velocity.Change(x: newVelocity);
         }
 

@@ -15,7 +15,7 @@ namespace My2DPlatformer
             _spriteAnimator = spriteAnimator;
             _coinViews = coinViews;
             _characterView.LevelObjectViewContact += OnLevelObjectContact;
-            foreach (var coinView in coinViews)
+            foreach (var coinView in _coinViews)
             {
                _spriteAnimator.StartAnimation(coinView.SpriteRenderer, Track.coinRotation, true, _animationsSpeed);
             }

@@ -41,7 +41,7 @@ namespace My2DPlatformer
 
                 if (_IsDoingJump && Mathf.Approximately(_yVelocity, 0))
                 {
-                    _yVelocity = _characterView.JumpStartSpeed;
+                    _yVelocity = _characterView.JumpForce;
                 }
                 else if (_yVelocity < 0)
                 {

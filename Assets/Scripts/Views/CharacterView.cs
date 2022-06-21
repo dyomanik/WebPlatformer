@@ -24,7 +24,7 @@ namespace My2DPlatformer
         private float _animationsSpeed = 20f;
 
         [SerializeField]
-        private float _jumpStartSpeed = 700f;
+        private float _jumpForce = 700f;
 
         [SerializeField]
         private float _movingThreshold = 0.1f;
@@ -44,13 +44,15 @@ namespace My2DPlatformer
         public Action<LevelObjectView> LevelObjectViewContact { get; set; }
         public Action<BulletView, int> BulletContact { get; set; }
 
+        public Action<TrapView, int> TrapViewContact { get; set; }
+
         public SpriteRenderer SpriteRenderer => _spriteRenderer;
 
         public float WalkSpeed => _walkSpeed;
 
         public float AnimationSpeed => _animationsSpeed;
 
-        public float JumpStartSpeed => _jumpStartSpeed;
+        public float JumpForce => _jumpForce;
 
         public float MovingThreshold => _movingThreshold;
 
@@ -74,8 +76,10 @@ namespace My2DPlatformer
             {
                 LevelObjectViewContact?.Invoke(levelObjectView);
             }
-
-            
+            if (collision.gameObject.TryGetComponent<TrapView>(out var trapView))
+            {
+                TrapViewContact?.Invoke(trapView, 1);
+            }
         }
 
         private void OnCollisionEnter2D(Collision2D collision)
@@ -86,11 +90,11 @@ namespace My2DPlatformer
                 {
                     BulletContact?.Invoke(bulletView, 3);
                 }
-                else BulletContact?.Invoke(bulletView, 1);
+                else
+                {
+                    BulletContact?.Invoke(bulletView, 1);
+                }
             }
-            
         }
-
-
     }
 }
