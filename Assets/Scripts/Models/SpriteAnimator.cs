@@ -80,8 +80,7 @@ namespace My2DPlatformer
             foreach (var animation in _activeAnimations)
             {
                 animation.Value.Update();
-                animation.Key.sprite =
-                animation.Value.Sprites[(int)animation.Value.Counter];
+                animation.Key.sprite = animation.Value.Sprites[(int)animation.Value.Counter];
             }
         }
 
