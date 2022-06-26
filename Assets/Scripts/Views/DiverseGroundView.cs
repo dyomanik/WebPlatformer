@@ -9,7 +9,7 @@ namespace My2DPlatformer
         [SerializeField]
         private Vector3 _startPosition;
 
-        public Vector3 StartPosition { get => _startPosition;}
-        public Transform StartTransform { get => _StartTransform;}
+        public Vector3 StartPosition => _startPosition;
+        public Transform StartTransform => _StartTransform;
     }
 }

@@ -48,22 +48,28 @@ namespace My2DPlatformer
         private CoinsManager _coinsManager;
         private LevelCompleteManager _levelCompleteManager;
         private LiftsManager _liftsManager;
-
+        
 
         private void Start()
         {
             _paralaxManager = new ParalaxManager(_camera.transform, _backgrounds, _foregrounds);
+            
+
             _playerConfig = Resources.Load<SpriteAnimationsConfig>("PlayerSpriteAnimationsConfig");
             _coinsConfig = Resources.Load<SpriteAnimationsConfig>("StarSpriteAnimationsConfig");
+
             _playerSpriteAnimator = new SpriteAnimator(_playerConfig);
             _coinsSpriteAnimator = new SpriteAnimator(_coinsConfig);
+
             _playerSpriteAnimator.StartAnimation(_characterView.SpriteRenderer, Track.walk, true, 10);
             _mainHeroPhysicsWalker = new MainHeroPhysicsWalker(_characterView, _playerSpriteAnimator);
+
             _aimingBarrel = new AimingBarrel(_cannonView.BarrelTransform, _characterView.transform);
             _bulletEmitter = new BulletEmitter(_bullets, _cannonView.BulletEmitterTransform);
-            _coinsManager = new CoinsManager(_characterView, _coins, _coinsSpriteAnimator);
+            
             _levelCompleteManager = new LevelCompleteManager(_characterView, _deathZones, _winZone);
             _liftsManager = new LiftsManager(_liftViews, _liftTriggers);
+            _coinsManager = new CoinsManager(_characterView, _coins, _coinsSpriteAnimator);
         }
 
         private void Update()

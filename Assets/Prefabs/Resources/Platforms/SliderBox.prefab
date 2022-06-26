@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3142549809980997738}
   - component: {fileID: 3142549809980997739}
   - component: {fileID: 3142549809980997743}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SliderBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}

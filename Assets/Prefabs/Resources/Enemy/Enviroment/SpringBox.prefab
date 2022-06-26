@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5096759348136224858}
   - component: {fileID: 5096759348136224859}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mossy - TileSet_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5096759348272713709}
   - component: {fileID: 5096759348272713706}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SlimeBasic_00006
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -174,7 +174,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5096759348360824185}
   - component: {fileID: 612831238198015302}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SpringBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -229,7 +229,7 @@ GameObject:
   - component: {fileID: 4387705960370347096}
   - component: {fileID: 996657214261814312}
   - component: {fileID: 2265808179689509155}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Root
   m_TagString: Untagged
   m_Icon: {fileID: 0}

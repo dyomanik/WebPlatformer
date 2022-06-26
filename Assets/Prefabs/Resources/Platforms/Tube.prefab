@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2625713100546419518}
   - component: {fileID: 2625713100546419519}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: tube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2625713100613560689}
   - component: {fileID: 2625713100613560694}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: tube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -176,7 +176,7 @@ GameObject:
   - component: {fileID: 2625713101222236393}
   - component: {fileID: 2625713101222236399}
   - component: {fileID: 2625713101222236398}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: tube (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -303,7 +303,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2625713101255304092}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Tube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -340,7 +340,7 @@ GameObject:
   - component: {fileID: 2625713101328397077}
   - component: {fileID: 2625713101328397076}
   - component: {fileID: 2625713101328397079}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: input
   m_TagString: Untagged
   m_Icon: {fileID: 0}

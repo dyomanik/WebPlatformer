@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5037183137081664488}
   - component: {fileID: 5037183137081664489}
   - component: {fileID: 5037183137081664486}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Gear (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -120,7 +120,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0.04}
-  m_ConnectedAnchor: {x: 39.626, y: 2.657125}
+  m_ConnectedAnchor: {x: -0.0139999995, y: -1.0528748}
   m_UseMotor: 1
   m_Motor:
     m_MotorSpeed: 200
@@ -138,7 +138,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5037183137840359239}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Conveer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -175,7 +175,7 @@ GameObject:
   - component: {fileID: 5037183138316959535}
   - component: {fileID: 5037183138316959532}
   - component: {fileID: 5037183138316959533}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Gear (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -283,7 +283,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 40.487, y: 2.611}
+  m_ConnectedAnchor: {x: 0.847, y: -1.099}
   m_UseMotor: 1
   m_Motor:
     m_MotorSpeed: 200
@@ -304,7 +304,7 @@ GameObject:
   - component: {fileID: 5037183138814122916}
   - component: {fileID: 5037183138814122917}
   - component: {fileID: 5037183138814122914}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: belt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -432,7 +432,7 @@ GameObject:
   - component: {fileID: 5037183139125499218}
   - component: {fileID: 5037183139125499219}
   - component: {fileID: 5037183139125499216}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Gear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -540,7 +540,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 38.744, y: 2.611}
+  m_ConnectedAnchor: {x: -0.89599997, y: -1.099}
   m_UseMotor: 1
   m_Motor:
     m_MotorSpeed: 200
