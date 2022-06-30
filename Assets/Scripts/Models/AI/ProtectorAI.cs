@@ -34,28 +34,14 @@ namespace My2DPlatformer
         private void OnTargetReached()
         {
             _destinationSetter.target = _isPatrolling? _model.GetNextTarget() : _model.GetClosestTarget(_enemyView.transform.position);
-            if (_destinationSetter.target.position.x > _enemyView.transform.position.x)
-            {
-                _enemyView.SpriteRenderer.flipX = false;
-            }
-            else
-            {
-                _enemyView.SpriteRenderer.flipX = true;
-            }
+            _enemyView.SpriteRenderer.flipX = _destinationSetter.target.position.x < _enemyView.transform.position.x;
         }
 
         public void StartProtection(GameObject invader)
         {
             _isPatrolling = false;
             _destinationSetter.target = invader.transform;
-            if (_destinationSetter.target.position.x > _enemyView.transform.position.x)
-            {
-                _enemyView.SpriteRenderer.flipX = false;
-            }
-            else
-            {
-                _enemyView.SpriteRenderer.flipX = true;
-            }
+            _enemyView.SpriteRenderer.flipX = _destinationSetter.target.position.x < _enemyView.transform.position.x;
         }
 
         public void FinishProtection(GameObject invader)

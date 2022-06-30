@@ -11,24 +11,17 @@ namespace My2DPlatformer {
 
         public StalkerAI(EnemyView view, StalkerAIModel model, Seeker seeker, Transform target)
         {
-            _view = view != null ? view : throw new ArgumentNullException(nameof(view));
-            _model = model != null ? model : throw new ArgumentNullException(nameof(model));
-            _seeker = seeker != null ? seeker : throw new ArgumentNullException(nameof(seeker));
-            _target = target != null ? target : throw new ArgumentNullException(nameof(target));
+            _view = view;
+            _model = model;
+            _seeker = seeker;
+            _target = target;
         }
 
         public void FixedUpdate()
         {
             var newVelocity = _model.CalculateVelocity(_view.transform.position) * Time.fixedDeltaTime;
             _view.Rigidbody.velocity = newVelocity;
-            if (_view.Rigidbody.velocity.x > 0)
-            {
-                _view.SpriteRenderer.flipX = false;
-            }
-            else
-            {
-                _view.SpriteRenderer.flipX = true;
-            }
+            _view.SpriteRenderer.flipX = _view.Rigidbody.velocity.x < 0;
         }
         public void RecalculatePath()
         {

@@ -15,14 +15,7 @@ namespace My2DPlatformer
         public void FixedUpdate()
         {
             _view.Rigidbody.velocity = _model.CalculateVelocity(_view.transform.position) * Time.fixedDeltaTime;
-            if (_view.Rigidbody.velocity.x > 0)
-            {
-                _view.SpriteRenderer.flipX = false;
-            }
-            else
-            {
-                _view.SpriteRenderer.flipX = true;
-            }
+            _view.SpriteRenderer.flipX = _view.Rigidbody.velocity.x < 0;
         }
     }
 }
